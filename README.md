@@ -154,21 +154,7 @@ The notebook installs its own Python dependencies using a `%pip install` cell. M
 
 The notebook writes research files below:
 
-```text
-/kaggle/working/potholelens_final_gpu_safe/
-├── outputs/
-│   ├── dataset_audit.csv
-│   ├── subset_manifest.csv
-│   ├── quick_model_comparison.csv
-│   ├── final_detection_metrics.csv
-│   ├── val_image_level_scores.csv
-│   ├── test_image_level_scores.csv
-│   ├── test_85_target_operating_metrics.csv
-│   └── experiment_summary.json
-├── runs/                       # training runs and weights
-├── rdd2022_subset/             # temporary copied working images/labels
-└── potholelens_rdd2022_gpu_safe.yaml
-```
+
 
 Graphs and XAI demonstrations are displayed in the executed notebook; some supporting plots also appear in the training-run directories. Do not assume every displayed figure is independently exported as a PNG. The paths in the subset manifest refer to Kaggle's working environment, not a portable local directory. The subset and complete Kaggle working archives can be several gigabytes and should **not** be pushed to ordinary Git history.
 
@@ -179,13 +165,12 @@ This is a **suggested structure**, not a claim that every file has already been 
 ```text
 PotholeLens/
 ├── README.md
-├── potholes(5).ipynb
-├── results/              # selected, shareable CSV/JSON outputs if uploaded
+├── potholes.ipynb
 ├── figures/              # selected, permitted figures if uploaded
-└── docs/                 # optional project documentation
+
 ```
 
-Do not commit raw RDD2022 images, temporary Kaggle subsets, huge ZIP archives, personally identifiable imagery, credentials or access tokens. Commit a trained model only if its size and distribution rights permit it; otherwise explain how to recreate it from the notebook. If a `requirements.txt` is later added, generate and test it from the actual working environment rather than inventing pinned versions.
+
 
 ## Limitations and next steps
 
@@ -209,14 +194,14 @@ AI assistance was used for drafting, interpretation and debugging support; the t
 The archived executed notebook has this SHA-256 checksum:
 
 ```text
-File:   potholes(5).ipynb
+File:   potholes.ipynb
 SHA256: 41382bc73a7e0643d7a0d4dceb32ef39f8b537a6b99158021dc851db003d0649
 ```
 
 This checksum matches **the exact archived notebook examined for this README**. Editing or re-saving the notebook may change the checksum; re-compute it if you upload a modified version.
 
 ```bash
-sha256sum 'potholes(5).ipynb'
+sha256sum 'potholes.ipynb'
 ```
 
 **External dataset:** https://www.kaggle.com/datasets/aliabdelmenam/rdd-2022  
