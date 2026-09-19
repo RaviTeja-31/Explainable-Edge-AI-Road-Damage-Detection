@@ -137,9 +137,9 @@ The latency was measured in the notebook's GPU environment; it is **not a benchm
 
 ## Run the notebook on Kaggle
 
-**Main notebook:** [`potholes(5).ipynb`](potholes(5).ipynb) (place this file in the repository root or update the link if you organise notebooks into a folder).
+**Main notebook:** [`potholes.ipynb`](potholes.ipynb) (place this file in the repository root or update the link if you organise notebooks into a folder).
 
-1. Open [Kaggle Notebooks](https://www.kaggle.com/code) and create/import a notebook from `potholes(5).ipynb`.
+1. Open [Kaggle Notebooks](https://www.kaggle.com/code) and create/import a notebook from `potholes.ipynb`.
 2. Choose a **GPU accelerator**. The executed final run used a **Tesla T4**. Check PyTorch/CUDA compatibility before starting; the earlier P100 environment produced an incompatible-kernel error.
 3. In **Add Input**, attach [RDD2022](https://www.kaggle.com/datasets/aliabdelmenam/rdd-2022). The dataset should contain `RDD_SPLIT/train`, `RDD_SPLIT/val` and `RDD_SPLIT/test`, each with `images` and `labels` directories.
 4. Enable internet access if needed for the notebook's initial package installation and pretrained-weight downloads, subject to your Kaggle account permissions.
